@@ -1,0 +1,58 @@
+.table-blue-account {
+    color: #4a6b85;
+
+    thead {
+        background-color: #f4f7fd;
+        border: 1px solid #c8d3dc;
+        border-bottom: 0;
+    }
+
+    tbody {
+        background-color: #ffffff;
+        border: 1px solid #c8d3dc;
+        color: #5d8fbb;
+    }
+}
+
+.table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td {
+    border-top: 1px solid #c8d3dc;
+}
+
+.table-hover {
+    > tbody > tr:hover {
+        background-color: #d7e9fa;
+        border-color: #d7e9fa;
+    }
+}
+
+.pagination {
+    // Blue Account link style
+    > li {
+        display: inline;
+        > a,
+        > span {
+            color: #506f89;
+        }
+    }
+
+    > li > a,
+    > li > span {
+        &:hover,
+        &:focus {
+            color: #59768b;
+            background-color: #fffaed;
+            border-color: #c8d3dc;
+        }
+    }
+
+    > .active > a,
+    > .active > span {
+        &,
+        &:hover,
+        &:focus {
+            color: #6f8ca4;
+            background-color: #d7e9fa;
+            border-color: #87c8f2;
+        }
+    }
+}

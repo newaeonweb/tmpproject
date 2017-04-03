@@ -1,0 +1,42 @@
+// Login Page
+//////////////////////////////////////////////////////////////////////
+body {
+	font-family: 'proximanova-regular', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #f1f4f9;
+}
+
+a, a:hover {
+  color: #55a4e9;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-inverse {
+  background-color: #1f88e2;
+  border: 0;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-brand {
+    font-size: 15px;
+}
+
+#navbar-top .brand > .icon-logo_contaazul {
+    width: auto;
+    height: auto;
+    color: #ffffff;
+    margin: auto;
+    line-height: 14px;
+    background: none;
+    padding-right: 10px;
+    display: inline;
+}
+
+//F1F4F9

@@ -1,0 +1,53 @@
+
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Adicionar Veiculo</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="addCarForm">
+        <div class="form-group" ng-class="{ 'has-error': addCarForm.modelo.$touched && addCarForm.modelo.$invalid }">
+            <label for="modelo">Modelo*</label>
+            <input type="text" name="modelo" ng-model="$ctrl.car.modelo" class="form-control" id="modelo" placeholder="Modelo do Veiculo" required>
+            <div class="help-block" ng-messages="addCarForm.modelo.$error" ng-if="addCarForm.modelo.$touched">
+                <p ng-message="required">Campo Obrigatório.</p>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': addCarForm.marca.$touched && addCarForm.marca.$invalid }">
+            <label for="marca">Marca*</label>
+            <input type="text" name="marca" ng-model="$ctrl.car.marca" class="form-control" id="marca" placeholder="Marca" required>
+            <div class="help-block" ng-messages="addCarForm.marca.$error" ng-if="addCarForm.marca.$touched">
+                <p ng-message="required">Campo Obrigatório.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="foto">Foto</label>
+            <input type="text" ng-model="$ctrl.car.foto" class="form-control" id="foto" placeholder="Ex: www.meusite.com/minha-imagem.jpg">
+            <p class="help-block">Adicione a url para imagem.</p>
+        </div>
+        <div class="form-group">
+            <label for="combustivel">Combustível</label>
+            <select ng-model="$ctrl.car.combustivel" class="form-control" id="combustivel">
+                <option>Selecione o tipo de combustível</option>
+                <option value="Flex">Flex</option>
+                <option value="Gasolina">Gasolina</option>
+                <option value="Alcool">Alcool</option>
+            </select>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': addCarForm.placa.$touched && addCarForm.placa.$invalid }">
+            <label for="placa">Placa*</label>
+            <input type="text" name="placa" ng-model="$ctrl.car.placa" class="form-control" id="placa" required capitalize>
+            <div class="help-block" ng-messages="addCarForm.placa.$error" ng-if="addCarForm.placa.$touched">
+                <p ng-message="required">Campo Obrigatório.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="valor">valor</label>
+            <input type="text" ng-model="$ctrl.car.valor" class="form-control" id="valor">
+        </div>
+
+
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+    <button class="btn btn-success" type="button" ng-click="$ctrl.ok()" ng-disabled="addCarForm.$invalid">Salvar</button>
+</div>
